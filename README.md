@@ -19,7 +19,7 @@ pip install -r requirements.txt
 Plz put the downloaded data or your own data in the folder below:
 ```
 |-- root
-    |-- NFGNN
+    |-- NFGNN_standard
     |-- NFGNN_large
     |-- data
     |   |-- your own data
@@ -31,10 +31,10 @@ python ./NFGNN/train_model.py --dataset $dataset_name
 
 :point_right: (Optional) You can also run the code with preset hyperparameters:
 ```
-python ./NFGNN/reproduce.sh
+python ./NFGNN_standard/reproduce.sh
 ```
 
 :point_right: (Optional) For your own dataset, you can run the command below to search for the best combination of hyperparameters:
 ```
-python ./NFGNN/meta/meta.py
+python ./NFGNN_standard/meta/meta.py
 ```
