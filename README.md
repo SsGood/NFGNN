@@ -29,7 +29,12 @@ Plz put the downloaded data or your own data in the folder below:
 python ./NFGNN/train_model.py --dataset $dataset_name
 ```
 
-😄 (Optional) You can also run the code with preset hyperparameters:
+:point_right: (Optional) You can also run the code with preset hyperparameters:
 ```
 python ./NFGNN/reproduce.sh
+```
+
+:point_right: (Optional) For your own dataset, you can run the command below to search for the best combination of hyperparameters:
+```
+python ./NFGNN/meta/meta.py
 ```
