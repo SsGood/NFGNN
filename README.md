@@ -24,3 +24,12 @@ Plz put the downloaded data or your own data in the folder below:
     |-- data
     |   |-- your own data
 ```
+ You can run the command to obtain the result of NFGNN:
+```
+python ./NFGNN/train_model.py --dataset $dataset_name
+```
+
+😄 (Optional) You can also run the code with preset hyperparameters:
+```
+python ./NFGNN/reproduce.sh
+```
