@@ -49,14 +49,14 @@ def trial(hyperpm):
         f= open("./result/logger-{}-2.txt".format(args.dataname),"a+")
         f.write('>>>>>>>>>> min val now=%5.2f%% @ %s\n' % (-min_y*100, min_c))
         f.close()
-    if tst_score < min_tst:
+
         min_tst, min_tst_c = tst_score, cmd
         f= open("./result/logger-{}.txt".format(args.dataname),"a+")
         f.write('>>>>>>>>>> min tst now=%5.2f%% @ %s\n' % (-min_tst*100, min_tst_c))
         f.close()
     else:
         os.remove(index)
-    return {'loss': tst_score, 'status': hyperopt.STATUS_OK}
+    return {'loss': score, 'status': hyperopt.STATUS_OK}
 
 
 parser = argparse.ArgumentParser()
