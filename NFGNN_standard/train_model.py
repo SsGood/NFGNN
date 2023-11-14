@@ -214,10 +214,10 @@ def main(args_str=None):
 
         test_acc, best_val_acc, Gamma_0 = RunExp(
             args, dataset, data, Net, percls_trn, val_lb, RP)
-        Results0.append([test_acc, best_val_acc, Gamma_0])
+        Results0.append([test_acc, best_val_acc])
         print(f'best val acc: {best_val_acc}, test acc: {test_acc} on dataset {args.dataset}, in {RP} repeated experiment')
 
-    test_acc_mean, val_acc_mean, _ = np.mean(Results0, axis=0) * 100
+    test_acc_mean, val_acc_mean = np.mean(Results0, axis=0) * 100
     test_acc_std = np.sqrt(np.var(Results0, axis=0)[0]) * 100
     values=np.asarray(Results0)[:,0]
     uncertainty=np.max(np.abs(sns.utils.ci(sns.algorithms.bootstrap(values,func=np.mean,n_boot=1000),95)-values.mean()))
